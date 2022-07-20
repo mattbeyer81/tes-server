@@ -1,9 +1,9 @@
 import 'reflect-metadata';
 
-import { PongService } from "../src/services/pong-service";
+import { PongService } from "../../src/services/pong-service";
 import { mock } from 'jest-mock-extended';
-import { Repository } from "../src/interfaces/repository";
-import { IUser } from "../src/repositories/pong-repository";
+import { Repository } from "../../src/interfaces/repository";
+import { IUser } from "../../src/repositories/pong-repository";
 
 it('pong works', async () => {
 
