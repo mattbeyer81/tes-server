@@ -1,15 +1,7 @@
-import { connect, Mongoose } from "mongoose";
 import { app } from "./app";
 
-export const port = 3000;
-export const server = app.listen(port, async () => {
-    console.log('Listening on port: ' + port);
-    try {
-        await connect('mongodb://localhost:27017/test');
-        console.log('Connected to mongodb');
-    } catch (e)
-    {
-        console.log('Failed to connect to mongodb')
-    }
+const PORT = process.env.PORT || 3001;
+export const server = app.listen(PORT, async () => {
+    console.log('Server listening on ' + PORT);
 });
 

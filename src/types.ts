@@ -1,8 +1,5 @@
 const TYPES = {
-    Warrior: Symbol.for("Warrior"),
-    Weapon: Symbol.for("Weapon"),
-    ThrowableWeapon: Symbol.for("ThrowableWeapon"),
-    PongService: Symbol.for("PongService"),
+    CountryService: Symbol.for("CountryService"),
     PongRepository: Symbol.for("PongRepository")
 };
 

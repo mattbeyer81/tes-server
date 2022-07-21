@@ -23,7 +23,7 @@
                 "${workspaceRoot}/node_modules/jest/bin/jest.js",
                 "${fileBasename}",
                 "-t",
-                "server works",
+                "get countries works",
                 "--watch",
                 "--runInBand"
             ],
