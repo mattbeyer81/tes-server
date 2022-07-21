@@ -3,6 +3,7 @@ import * as bodyParser from 'body-parser';
 import { InversifyExpressServer } from 'inversify-express-utils';
 
 import './controllers/country-controller';
+import './controllers/university-controller';
 import { container } from './inversify.config';
 
 let server = new InversifyExpressServer(container);

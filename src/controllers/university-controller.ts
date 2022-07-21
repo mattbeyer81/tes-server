@@ -8,7 +8,7 @@ import { IUniversityService } from "../services/university-service-interface";
 export class UniversityController implements interfaces.Controller {
 
     private _universityService: IUniversityService;
-    public constructor(@inject(TYPES.CountryService) universityService: IUniversityService,
+    public constructor(@inject(TYPES.UniversityService) universityService: IUniversityService,
     ) {
       this._universityService = universityService;
     }

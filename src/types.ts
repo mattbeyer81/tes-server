@@ -1,6 +1,6 @@
 const TYPES = {
     CountryService: Symbol.for("CountryService"),
-    PongRepository: Symbol.for("PongRepository")
+    UniversityService: Symbol.for("UniversityService")
 };
 
 export { TYPES };
