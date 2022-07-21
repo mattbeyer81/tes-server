@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --runInBand ./unit-tests",
+    "unit-tests": "jest --runInBand ./unit-tests",
     "compile": "tsc",
     "ts-node": "ts-node",
     "start": "npm run ts-node -- ./src/index.ts"
