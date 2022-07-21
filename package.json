@@ -26,6 +26,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "@types/axios": "^0.14.0",
     "axios": "^0.27.2",
     "inversify": "^6.0.1",
     "inversify-express-utils": "^6.4.3",

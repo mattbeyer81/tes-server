@@ -7,20 +7,29 @@ import { Container } from "inversify";
 import { InversifyExpressServer } from "inversify-express-utils";
 import "../../src/controllers/country-controller";
 import { TYPES } from "../../src/types";
+import { CountryData } from "../../src/services/country-service";
 
 it('get countries works', async() => {
 
     const mockCountryService = mock<ICountryService>();
 
-    mockCountryService.getCountries.mockResolvedValue(["some country"]);
+    const expectedCountryData: CountryData = {
+        countries: [{
+            name: {
+                official: "some-office-name",
+                common: "some-common-name"
+            }
+        }]
+    }
+    mockCountryService.getCountries.mockResolvedValue(expectedCountryData);
 
     const container = new Container();
     container.bind<ICountryService>(TYPES.CountryService).toConstantValue(mockCountryService);  
     const server = new InversifyExpressServer(container);
     const response = await request(server.build()).get("/countries");
-    const countries: string[] = response.body;
+    const actualCountryData: CountryData = response.body;
 
-    expect(countries[0]).toBe("some country");
+    expect(actualCountryData.countries[0].name.common).toBe(expectedCountryData.countries[0].name.common);
 
 
 
